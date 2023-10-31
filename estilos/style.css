@@ -29,15 +29,15 @@ main {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, -50%);
    overflow: hidden;
 
    background-color: white;
    width: 255px;
-   height: 480px;
+   height: 500px;
    border-radius: 20px;
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.463);
 
+   transform: translate(-50%, -50%);
    transition: width .3s, heigth .3s;
    transition-timing-function: ease;
 }
@@ -64,6 +64,44 @@ main {
    font-size: 0.8em;
 }
 
+form > div.campo {
+   background-color: #5f2c82;
+   border: 2px solid #5f2c82;
+   display: block;
+   width: 100%;
+   height: 40px;
+   border-radius: 8px;
+   margin: 5px 0px;
+}
+
+div.campo label {
+   display: none;
+}
+
+div.campo > i {
+   color: white;
+   /* backgroud-color: black; */
+   font-size: 2em;
+   width: 40px;
+   padding: 5px;
+}
+
+div.campo > input { /* Se tiver alguma animação/trasnsformação, faça na última linha do seu seletor */
+   background-color: #75e5e2;
+   font-size: 1em;
+   width: calc(100% - 45px); /* utilizar calc */
+   height: 100%;
+   border: 0px;
+   border-radius: 8px;
+   padding: 4px;
+   transform: translateY(-10px);
+}
+
+div.campo > input:focus-within {
+   background-color: white;
+   border: none;
+}
+
 form > input[type=submit] {
    display: block;
    font-size: 1em;
@@ -74,19 +112,6 @@ form > input[type=submit] {
    border: none;
    border-radius: 5px;
    cursor: pointer;
-}
-
-div.campo label {
-   display: none;
-}
-
-form > div.campo {
-   background-color: #5f2c82;
-   display: block;
-   width: 100%;
-   height: 40%;
-   border-radius: 5px;
-   margin: 5px 0px;
 }
 
 form > input[type=submit]:hover {
